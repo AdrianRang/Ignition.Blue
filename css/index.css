@@ -1,0 +1,59 @@
+#Background{
+    background-color: rgb(13, 13, 125);
+    padding: 100%;
+    padding-left: 0%;
+    padding-top: 0%;
+    position: fixed;
+    zoom: 90%;
+}
+
+#large-logo{
+    width: 650px;
+    transform: translateX(-250px);
+    position: absolute;
+    -webkit-user-drag: none;
+}
+
+.option{
+    font-size: 100px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: aliceblue;
+    text-wrap: nowrap;
+    z-index: 1;
+    position: absolute;
+    user-select: none;
+    transition: opacity 200ms ease, transform 300ms ease;
+    text-decoration: none;
+}
+
+#Background:has(.option:hover) .option:not(.option:hover){
+    opacity: 0.2;
+}
+#Background:has(.option:hover) .option:hover{
+    transform: translateY(-5px);
+}
+
+#About-Us{
+    margin-left: 300px;
+    margin-top: 200px;
+}
+
+#Events{
+    margin-left: 350px;
+    margin-top: 325px;
+}
+
+#Projects{
+    margin-left: 375px;
+    margin-top: 450px;
+}
+
+#Sponsors{
+    margin-left: 350px;
+    margin-top: 575px;
+}
+
+#Contact-Us{
+    margin-left: 300px;
+    margin-top: 700px;
+}
