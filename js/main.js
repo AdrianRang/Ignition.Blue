@@ -1,4 +1,4 @@
-const enhance = id => {
+const separate = id => {
     const element = document.getElementById(id),
           text = element.innerText.split("");
     
@@ -15,11 +15,11 @@ const enhance = id => {
     });
   }
 
-  enhance("About-Us");
-  enhance("Events");
-  enhance("Projects");
-  enhance("Sponsors");
-  enhance("Contact-Us");
+  separate("About-Us");
+  separate("Events");
+  separate("Projects");
+  separate("Sponsors");
+  separate("Contact-Us");
 
 
 // gsap.from("#large-logo", {opacity: 0, duration: 1, x: -200});
