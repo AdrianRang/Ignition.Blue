@@ -1,26 +1,19 @@
-const separate = id => {
-    const element = document.getElementById(id),
-          text = element.innerText.split("");
-    
-    element.innerText = "";
-    
-    text.forEach(letter => {
-      const span = document.createElement("span");
+// @ts-check
+/**
+ * @typedef {import("gsap")} gsap
+ */
 
-      span.className = "letter";
+let menuOpen = true;
 
-      span.innerText = letter;
-
-      element.appendChild(span);
-    });
+// @ts-ignore
+document.querySelector(".menu").addEventListener("click", () => {
+  if (menuOpen) {
+    gsap.to(".menu-container", {x: "150vw", scale: 1.25, duration: 1.5, ease: "power3.inOut"});
+    gsap.to(".option", {x: "100vw", duration: 0.5, stagger: 0.1, ease: "power3.inOut"});
+    menuOpen = false;
+  } else {
+    gsap.fromTo(".menu-container", {x: "-200vw"}, {x: "0", scale: 1, duration: 1.5, ease: "power3.inOut"});
+    gsap.fromTo(".option", {x: 0, scale: 1.5}, {x: "0", scale: 1, delay: 0.25, duration: 0.5, stagger: 0.1, ease: "power3.out"});
+    menuOpen = true;
   }
-
-  separate("About-Us");
-  separate("Events");
-  separate("Projects");
-  separate("Sponsors");
-  separate("Contact-Us");
-
-
-// gsap.from("#large-logo", {opacity: 0, duration: 1, x: -200});
-// gsap.from(".option", {opacity: 0, duration: 1, y: -50, stagger: 0.2});
+});
