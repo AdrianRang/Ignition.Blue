@@ -54,12 +54,14 @@ separate("Contact-Us");
 //* Handling About Us
 // @ts-ignore
 document.querySelector("#About-Us").addEventListener("mouseover", () =>{
-  gsap.to("#About-Us > .letter", {y: "random(-25, 25)", stagger: 0.05, ease: "circ"})
+  gsap.to("#About-Us > .letter", {y: "random(-25, 25)", stagger: 0.05, ease: "circ"});
+  gsap.to(".option:not(#About-Us)", {opacity: 0.2, duration: "50ms"});
 });
 
 // @ts-ignore
 document.querySelector("#About-Us").addEventListener("mouseleave", () =>{
   gsap.to("#About-Us > .letter", {y: "0%", stagger: 0.05, ease: "elastic"})
+  gsap.to(".option", {opacity: 1, duration: "100ms"})
 });
 
 // @ts-ignore
@@ -72,11 +74,13 @@ document.querySelector("#About-Us").addEventListener("mousedown", () =>{
 // @ts-ignore
 document.querySelector("#Events").addEventListener("mouseover", () =>{
   gsap.to("#Events > .letter", {y: "random(-25, 25)", stagger: 0.05, ease: "circ"})
+  gsap.to(".option:not(#Events)", {opacity: 0.2, duration: "50ms"});
 });
 
 // @ts-ignore
 document.querySelector("#Events").addEventListener("mouseleave", () =>{
   gsap.to("#Events > .letter", {y: "0%", stagger: 0.05, ease: "elastic"})
+  gsap.to(".option", {opacity: 1, duration: "100ms"})
 });
 
 // @ts-ignore
@@ -88,11 +92,13 @@ document.querySelector("#Events").addEventListener("mousedown", () =>{
 // @ts-ignore
 document.querySelector("#Projects").addEventListener("mouseover", () =>{
   gsap.to("#Projects > .letter", {y: "random(-25, 25)", stagger: 0.05, ease: "circ"})
+  gsap.to(".option:not(#Projects)", {opacity: 0.2, duration: "50ms"});
 });
 
 // @ts-ignore
 document.querySelector("#Projects").addEventListener("mouseleave", () =>{
   gsap.to("#Projects > .letter", {y: "0%", stagger: 0.05, ease: "elastic"})
+  gsap.to(".option", {opacity: 1, duration: "100ms"})
 });
 
 // @ts-ignore
@@ -104,11 +110,13 @@ document.querySelector("#Projects").addEventListener("mousedown", () =>{
 // @ts-ignore
 document.querySelector("#Sponsors").addEventListener("mouseover", () =>{
   gsap.to("#Sponsors > .letter", {y: "random(-25, 25)", stagger: 0.05, ease: "circ"})
+  gsap.to(".option:not(#Sponsors)", {opacity: 0.2, duration: "50ms"});
 });
 
 // @ts-ignore
 document.querySelector("#Sponsors").addEventListener("mouseleave", () =>{
   gsap.to("#Sponsors > .letter", {y: "0%", stagger: 0.05, ease: "elastic"})
+  gsap.to(".option", {opacity: 1, duration: "100ms"})
 });
 
 // @ts-ignore
@@ -120,11 +128,13 @@ document.querySelector("#Sponsors").addEventListener("mousedown", () =>{
 // @ts-ignore
 document.querySelector("#Contact-Us").addEventListener("mouseover", () =>{
   gsap.to("#Contact-Us > .letter", {y: "random(-25, 25)", stagger: 0.05, ease: "circ"})
+  gsap.to(".option:not(#Contact-Us)", {opacity: 0.2, duration: "50ms"});
 });
 
 // @ts-ignore
 document.querySelector("#Contact-Us").addEventListener("mouseleave", () =>{
   gsap.to("#Contact-Us > .letter", {y: "0%", stagger: 0.05, ease: "elastic"})
+  gsap.to(".option", {opacity: 1, duration: "100ms"})
 });
 
 // @ts-ignore
