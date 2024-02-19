@@ -15,13 +15,13 @@
     transform: translate(75px, 175px);
 }
 
-#Background{
+body{
     background-color: rgb(13, 13, 125);
     padding: 100%;
     padding-left: 0%;
     padding-top: 0%;
     position: fixed;
-    zoom: 90%;
+    zoom: 70%;
 }
 
 #large-logo{
@@ -34,7 +34,8 @@
 
 .option{
     font-size: 100px;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Montserrat";
+    font-weight: bold;
     color: aliceblue;
     text-wrap: nowrap;
     z-index: 1;
@@ -44,11 +45,33 @@
     text-decoration: none;
 }
 
-#Background:has(.option:hover) .option:not(.option:hover){
+h1{
+    font-size: 200px;
+    font-family: "Montserrat";
+    position: absolute;
+    color: aliceblue;
+}
+
+#team-name{
+    transform: translate(350px, -100px);
+    text-wrap: nowrap;
+}
+
+#team-number{
+    transform: translate(1180px, 100px);
+    font-weight: bolder;
+}
+
+/* .links:has(.option:hover) .option:not(.option:hover){
     opacity: 0.2;
 }
-#Background:has(.option:hover) .option:hover{
+.links:has(.option:hover) .option:hover{
     transform: translateY(-5px);
+} */
+
+.letter{
+    /* position: absolute; */
+    display: inline-block;
 }
 
 #About-Us{
@@ -76,6 +99,11 @@
     margin-top: 700px;
 }
 
+.space{
+    padding-left: 25px;
+    display: inline-block;
+}
+
 * {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }

@@ -6,20 +6,23 @@
         <title>Blue Ignition</title>
         <link rel="stylesheet" href="css/index.css">
         <script src="./node_modules/gsap/dist/gsap.min.js"></script>
+        <script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <script defer type="module", src="js/main.js"></script>
     </head>
-    <body id="Background">
+    <body>
         <button class="menu">toggle menu</button>
 
         <div class="menu-container">
             <img id="large-logo" src="Assets/logo.svg" alt="">
-
+            <h1 id="team-name">Blue Ignition</h1>
+            <h1 id="team-number">3526</h1>
             <div class="links">
-                <a class="option" id="About-Us" href="/About-Us.html">About Us</a>
-                <a class="option" id="Events" href="/Events.html">Events</a>
-                <a class="option" id="Projects" href="/Projects.html">Projects</a>
-                <a class="option" id="Sponsors" href="/Sponsors.html">Sponsors</a>
-                <a class="option" id="Contact-Us" href="/Contact-Us.html">Contact Us</a>
+                <div class="option" id="About-Us" data-link="/About-Us.html">About Us</div>
+                <div class="option" id="Events" data-link="/Events.html">Events</div>
+                <div class="option" id="Projects" data-link="/Projects.html">Projects</div>
+                <div class="option" id="Sponsors" data-link="/Sponsors.html">Sponsors</div>
+                <div class="option" id="Contact-Us" data-link="/Contact-Us.html">Contact Us</div>
             </div>
         </div>
     </body>
