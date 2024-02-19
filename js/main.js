@@ -139,5 +139,5 @@ const handleClick = async selector => {
   await gsap.to(".option", {x: "100vw", duration: 0.5, stagger: 0.1, ease: "power3.inOut"});
 
   //@ts-ignore
-  window.open(document.querySelector(selector).dataset.link,"_self")
+  window.open("./" + document.querySelector(selector).dataset.link,"_self")
 }
