@@ -1,14 +1,31 @@
 body{
     background: radial-gradient(farthest-corner at 40px 40px,
     darkblue 20% , dodgerblue);
-    padding: 100%;
-    padding-left: 0%;
-    padding-top: 0%;
+    padding-bottom: 100%;
     overflow: hidden;
     zoom: 70%;
+    margin: 0%;
+    display: flex;
 }
 
 h1{
     color: antiquewhite;
-    margin-bottom: 755px;
+    font-size: 200px;
+    font-family: "Montserrat";
+    /* margin-bottom: 755px; */
+    position: absolute;
+    transform: translateX(-250%);
+    text-wrap: nowrap;
+}
+
+#home{
+    width: 50px;
+    text-align: center;
+}
+
+.topbar{
+    background-color: black;
+    padding: 15px;
+    overflow: hidden;
+    width: 100%;
 }

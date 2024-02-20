@@ -5,19 +5,6 @@
 
 let menuOpen = true;
 
-// @ts-ignore
-document.querySelector(".menu").addEventListener("click", () => {
-  if (menuOpen) {
-    gsap.to(".menu-container", {x: "250vw", scale: 1.25, duration: 1.5, ease: "power3.inOut"});
-    gsap.to(".option", {x: "100vw", duration: 0.5, stagger: 0.1, ease: "power3.inOut"});
-    menuOpen = false;
-  } else {
-    gsap.fromTo(".menu-container", {x: "-200vw"}, {x: "0", scale: 1, duration: 1.5, ease: "power3.inOut"});
-    gsap.fromTo(".option", {x: 0, scale: 1.5}, {x: "0", scale: 1, delay: 0.25, duration: 0.5, stagger: 0.1, ease: "power3.out"});
-    menuOpen = true;
-  }
-});
-
 const separate = id => {
   const element = document.getElementById(id),
   // @ts-ignore
@@ -54,13 +41,13 @@ separate("Contact-Us");
 //* Handling About Us
 // @ts-ignore
 document.querySelector("#About-Us").addEventListener("mouseover", () =>{
-  gsap.to("#About-Us > .letter", {y: "random(-25, 25)", stagger: 0.05, ease: "circ"});
+  gsap.to("#About-Us > .letter", {y: "random(-25, 25)", rotation: "random(-10, 10)", stagger: 0.05, ease: "circ"});
   gsap.to(".option:not(#About-Us)", {opacity: 0.2, duration: "50ms"});
 });
 
 // @ts-ignore
 document.querySelector("#About-Us").addEventListener("mouseleave", () =>{
-  gsap.to("#About-Us > .letter", {y: "0%", stagger: 0.05, ease: "elastic"})
+  gsap.to("#About-Us > .letter", {y: "0%", rotation: 0, stagger: 0.05, ease: "elastic"})
   gsap.to(".option", {opacity: 1, duration: "100ms"})
 });
 
@@ -73,7 +60,7 @@ document.querySelector("#About-Us").addEventListener("mousedown", () =>{
 //* Handling Events
 // @ts-ignore
 document.querySelector("#Events").addEventListener("mouseover", () =>{
-  gsap.to("#Events > .letter", {y: "random(-25, 25)", stagger: 0.05, ease: "circ"})
+  gsap.to("#Events > .letter", {y: "random(-25, 25)", rotation: "random(-10, 10)", stagger: 0.05, ease: "circ"})
   gsap.to(".option:not(#Events)", {opacity: 0.2, duration: "50ms"});
 });
 
@@ -91,7 +78,7 @@ document.querySelector("#Events").addEventListener("mousedown", () =>{
 //* Handling Projects
 // @ts-ignore
 document.querySelector("#Projects").addEventListener("mouseover", () =>{
-  gsap.to("#Projects > .letter", {y: "random(-25, 25)", stagger: 0.05, ease: "circ"})
+  gsap.to("#Projects > .letter", {y: "random(-25, 25)", rotation: "random(-10, 10)", stagger: 0.05, ease: "circ"})
   gsap.to(".option:not(#Projects)", {opacity: 0.2, duration: "50ms"});
 });
 
@@ -109,7 +96,7 @@ document.querySelector("#Projects").addEventListener("mousedown", () =>{
 //* Handling Sponsors
 // @ts-ignore
 document.querySelector("#Sponsors").addEventListener("mouseover", () =>{
-  gsap.to("#Sponsors > .letter", {y: "random(-25, 25)", stagger: 0.05, ease: "circ"})
+  gsap.to("#Sponsors > .letter", {y: "random(-25, 25)", rotation: "random(-10, 10)", stagger: 0.05, ease: "circ"})
   gsap.to(".option:not(#Sponsors)", {opacity: 0.2, duration: "50ms"});
 });
 
@@ -127,7 +114,7 @@ document.querySelector("#Sponsors").addEventListener("mousedown", () =>{
 //* Handling Contact Us
 // @ts-ignore
 document.querySelector("#Contact-Us").addEventListener("mouseover", () =>{
-  gsap.to("#Contact-Us > .letter", {y: "random(-25, 25)", stagger: 0.05, ease: "circ"})
+  gsap.to("#Contact-Us > .letter", {y: "random(-25, 25)", rotation: "random(-10, 10)", stagger: 0.05, ease: "circ"})
   gsap.to(".option:not(#Contact-Us)", {opacity: 0.2, duration: "50ms"});
 });
 
@@ -149,5 +136,15 @@ const handleClick = async selector => {
   await gsap.to(".option", {x: "100vw", duration: 0.5, stagger: 0.1, ease: "power3.inOut"});
 
   //@ts-ignore
-  window.open("./" + document.querySelector(selector).dataset.link,"_self")
+  window.open("./" + document.querySelector(selector).dataset.link,"_self");
+  gsap.fromTo(".menu-container", {x: "-200vw"}, {x: "0", scale: 1, duration: 1.5, ease: "power3.inOut"});
+  gsap.fromTo(".option", {x: 0, scale: 1.5}, {x: "0", scale: 1, delay: 0.25, duration: 0.5, stagger: 0.1, ease: "power3.out"});
+  menuOpen = true;
+}
+
+if(!(navigator.userAgent.indexOf("Firefox") != -1)){
+  // @ts-ignore
+  document.body.style.zoom = document.querySelector("body").offsetHeight * 70/2057 * 1.5 + "%"
+}else{
+  alert("looks like you're using firefox, I haven't figured out how to configure zoom yet. yo probably need to zoom out")
 }
